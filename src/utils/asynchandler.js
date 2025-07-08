@@ -1,5 +1,5 @@
  export const asynchandler = (requsthandler)=>{
-    (req,res,next)=>{
+   return (req,res,next)=>{
      Promise.resolve(requsthandler(req,res,next)).catch((err)=>next(err))
     }
  }
